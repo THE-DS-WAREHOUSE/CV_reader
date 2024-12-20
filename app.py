@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-
 load_dotenv()
 import base64
 import streamlit as st
@@ -8,7 +7,7 @@ import io
 import openai
 import pdf2image
 import google.generativeai as genai
-
+import pandas as pd
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 # openai.api_key = os.getenv('CHAT_GPT_API_KEY')
 def get_gemini_response(input, pdf_content, prompt):
